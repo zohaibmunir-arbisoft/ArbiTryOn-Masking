@@ -21,7 +21,7 @@ class FlorenceMasking:
             )
         self.model_loaded = True
 
-    def get_mask(self, image_path, output_path="Outputs/"):
+    def get_mask(self, image_path, output_path="outputs/"):
         # Run inference on an image using the prompt
         results = self.model.predict(image_path)
 
