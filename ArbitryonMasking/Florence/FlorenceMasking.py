@@ -41,7 +41,9 @@ class FlorenceMasking:
         binary_mask = mask * 255
         # Save binary mask in output as samename_mask.png
         filename = image_path.split("/")[-1]
+        print('Mask Created for:', filename)
         cv2.imwrite(output_path + filename.split(".")[0] + "_mask.png", binary_mask)
+        print(f"File written to {output_path + filename.split('.')[0] + '_mask.png'}")
 
     def get_mask_from_folder(self, folder_path):
         # Open the folder and get all the images
